@@ -1,0 +1,18 @@
+{
+  "name": "Dapur Kantin",
+  "short_name": "Dapur Kantin",
+  "description": "Catatan usaha kue dan titip jual di kantin sekolah",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf7f1",
+  "theme_color": "#7b4937",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

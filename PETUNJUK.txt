@@ -1,0 +1,32 @@
+DAPUR KANTIN — PAKET PWA VERSI 2
+
+ISI PAKET
+- index.html: aplikasi utama
+- manifest.webmanifest: identitas aplikasi PWA
+- sw.js: dukungan cache/offline
+- icon.svg: ikon aplikasi
+
+FITUR TAMBAHAN VERSI 2
+- Database bahan baku yang bisa ditambah, diedit, dan dihapus.
+- Harga bahan per kemasan dikonversi otomatis ke harga per satuan dasar.
+- Perubahan harga bahan memperbarui HPP resep untuk produksi berikutnya.
+- Resep tersimpan dan bisa dipilih ulang setiap hari.
+- Catatan produksi per batch dengan HPP yang dikunci saat batch dibuat.
+- Stok dihitung dari total produksi dikurangi penjualan dan stok rusak/dibuang.
+- HPP penjualan memakai batch produksi terdahulu lebih dulu (FIFO), sehingga sisa stok dari hari sebelumnya tetap memakai modal batch asal.
+- Form pencatatan stok rusak/dibuang.
+
+CARA MEMASANG
+Unggah SEMUA isi folder ini ke hosting statis HTTPS (misalnya Cloudflare Pages / static hosting). Jangan unggah index.html sendirian.
+Setelah online, buka URL di Chrome Android > menu titik tiga > Tambahkan ke layar utama / Install aplikasi.
+
+PENTING TENTANG DATA
+Aplikasi ini masih menyimpan data di browser/perangkat yang digunakan (localStorage), belum memiliki database cloud atau sinkronisasi antarperangkat. Gunakan Pengaturan > Cadangkan semua data (JSON) secara rutin. Untuk pindah perangkat, buka aplikasi di perangkat baru lalu Pengaturan > Pulihkan cadangan JSON.
+
+ALUR HARIAN YANG DISARANKAN
+1. Input bahan baku dan resep satu kali.
+2. Setiap membuat makanan, catat jumlah produksi di tab Produksi & Stok.
+3. Catat kiriman ke masing-masing kantin di tab Pengiriman & Jualan.
+4. Setelah makanan kembali, isi jumlah sisa dan uang diterima. Sisa yang masih layak jual tetap menjadi stok.
+5. Catat makanan yang rusak/dibuang di tab Produksi & Stok.
+6. Periksa laporan untuk omzet, HPP terjual, biaya operasional, dan laba bersih.
